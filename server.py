@@ -14,9 +14,9 @@ ToPost = []
 TOKEN = SECRET_TOKEN
 x = int(0)
 
-bot = commands.Bot(command_prefix='@')
+bot = commands.Bot(command_prefix='>')
 
-@bot.command(name='set-channel', help='Sets channel to display news. USAGE: @set-channel NAME')
+@bot.command(name='set-channel', help='Sets channel to display news. USAGE: >set-channel NAME')
 async def channel_set(ctx, Channel):
     global CurrentChan
     global ToPost
@@ -32,7 +32,7 @@ async def channel_set(ctx, Channel):
     response = ("The channel is set to {}".format(Channel))
     await ctx.send(response)
 
-@bot.command(name='remove-channel', help='Remove channel to use. USAGE: @remove-channel NAME ')
+@bot.command(name='remove-channel', help='Remove channel to use. USAGE: >remove-channel NAME ')
 async def channel_set(ctx, Channel):
     global ToPost
     Temp = discord.utils.get(bot.get_all_channels(), name=Channel)
