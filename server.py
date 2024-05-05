@@ -11,7 +11,7 @@ SetChan = int(0)
 CurrentChan = str(" ")
 pentry = str(" ")
 ToPost = []
-TOKEN = "Token"
+TOKEN = SECRET_TOKEN
 x = int(0)
 
 bot = commands.Bot(command_prefix='@')
